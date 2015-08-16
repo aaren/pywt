@@ -17,6 +17,7 @@ try:
 except NameError:
     basestring = str
 
+
 class FancyModule(ModuleType):
     """A ModuleType subclass providing lazy imports and
     warn-on-attribute-access.
@@ -74,6 +75,7 @@ class FancyModule(ModuleType):
                            r[len("<module"):])
         return r
 
+
 def install(name, class_=FancyModule):
     """Install a metamodule class into the module with name 'name'.
 
@@ -102,6 +104,7 @@ def install(name, class_=FancyModule):
         new_module.__metamodule_init__()
     sys.modules[name] = new_module
 
+
 def _hacky_make_metamodule(orig_module, class_):
     # Construct the new module instance by hand, calling only ModuleType
     # methods, so as to simulate what happens in the __class__ assignment
@@ -123,7 +126,7 @@ def _hacky_make_metamodule(orig_module, class_):
     if (3,) <= sys.version_info:
         fields += [("md_def", ctypes.c_void_p),
                    ("md_state", ctypes.c_void_p),
-               ]
+                   ]
         data_fields += ["md_def", "md_state"]
     # 3.4 adds md_weaklist and md_name
     if (3, 4) <= sys.version_info:
@@ -149,6 +152,7 @@ def _hacky_make_metamodule(orig_module, class_):
         _swap_attr(corig_module.contents, cnew_module.contents, data_field)
 
     return new_module
+
 
 def _swap_attr(obj1, obj2, attr):
     tmp1 = getattr(obj1, attr)
