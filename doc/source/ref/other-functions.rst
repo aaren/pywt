@@ -22,7 +22,7 @@ Single-level n-dimensional Discrete Wavelet Transform.
    Results are arranged in a dictionary, where key specifies
    the transform type on each dimension and value is a n-dimensional
    coefficients array.
-    
+
    For example, for a 2D case the result will look something like this::
 
       {
@@ -76,3 +76,26 @@ Central frequency of *psi* wavelet function
    :param precision:  Precision that will be used for wavelet function
                       approximation computed with the :meth:`Wavelet.wavefun`
                       method.
+
+
+Example Datasets
+----------------
+
+The following example datasets are available in the module `pywt.data`:
+
+  ========  =============================
+  **name**         **description**
+  ========  =============================
+    ecg      ECG waveform (1024 samples)
+    aero     grayscale image (512x512)
+   ascent    grayscale image (512x512)
+   camera    grayscale image (512x512)
+  ========  =============================
+
+Each can be loaded via a function of the same name.
+
+**Example:**
+.. sourcecode:: python
+
+    >>> import pywt
+    >>> camera = pywt.data.camera()
