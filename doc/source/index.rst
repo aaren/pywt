@@ -1,19 +1,18 @@
 PyWavelets - Discrete Wavelet Transform in Python
 =================================================
 
-PyWavelets is a free Open Source wavelet transform software for Python_
-programming language. It is written in Python, Cython and C for a mix of easy
-and powerful high-level interface and the best performance.
+PyWavelets is a free and open source wavelet transform package for Python_.
+It combines a high level interface with low level C and Cython performance.
 
-PyWavelets is very easy to start with and use. Just install the package, open
-the Python interactive shell and type:
+PyWavelets is very easy to use and get started with. Just install the package,
+open the Python interactive shell and type:
 
   .. sourcecode:: python
 
     >>> import pywt
     >>> cA, cD = pywt.dwt([1, 2, 3, 4], 'db1')
 
-Voilà! Computing wavelet transforms never before has been so simple :)
+Voilà! Computing wavelet transforms has never been so simple :)
 
 Main features
 -------------
